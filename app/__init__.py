@@ -1,9 +1,13 @@
 from flask import Flask
 from apscheduler.schedulers.background import BackgroundScheduler
 from app.backup import backup_check
+from TCPServer import TCPServer
 
 
 app = Flask(__name__)
+server = TCPServer()
+server.start()
+
 
 from app import routes
 
