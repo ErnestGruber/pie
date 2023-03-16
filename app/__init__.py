@@ -18,3 +18,5 @@ def check_upload():
 scheduler = BackgroundScheduler()
 job = scheduler.add_job(check_upload, 'interval', minutes=5)
 scheduler.start()
+if __name__ == "__main__":
+    app.run()
